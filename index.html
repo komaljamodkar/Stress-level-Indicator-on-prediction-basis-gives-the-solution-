@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stress Indicator</title>
+
+
+    <script type="text/javascript">
+			function showHideDiv(ele) {
+				var srcElement = document.getElementById(ele);
+				if (srcElement != null) {
+					if (srcElement.style.display == "block") {
+						srcElement.style.display = 'none';
+					}
+					else {
+						srcElement.style.display = 'block';
+					}
+					return false;
+				}
+			}
+
+			function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+display_c();
+ }
+		</script>
+</head>
+<body bgcolor="pink" onload=display_ct();>
+
+
+
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<span id='ct' ></span>
+<form  method="post" action="/check">
+    <h1> Stress Level Indicator</h1><br>
+    <p>This questionnaire will show how stress affects different parts of your life. Circle the response<br>
+which best indicates how often you experience each stress indicator during a typical week.<br>
+5- Almost Always (on five days a week)<br>
+4- Most of the time (on three days a week)<br>
+3- Some of the time ( on one and one-half days a week)<br>
+2- Almost never (less than two hours a week)<br>
+1- Never<br>
+    </p><br>
+ name : <input type="text" name="name"> <br><br>
+ Email : <input type="email" name="email"> <br><br>
+    <hr>
+    <input type="button" value="Physical Indicator" onClick="showHideDiv('divMsg')"/><br><br>
+		<div id="divMsg">
+				<br>1.My body feels tense all over.<br>
+    <input type="radio" value="10" name="options">1.Never &nbsp
+    <input type="radio" value="20" name="options">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options">3.Some Time&nbsp
+    <input type="radio" value="60" name="options">4.Most Time&nbsp
+    <input type="radio" value="90" name="options">5.Always&nbsp<br><hr>
+
+<br>2.I get severe or chronic headaches.<br>
+    <input type="radio" value="10" name="options1">1.Never &nbsp
+    <input type="radio" value="20" name="options1">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options1">3.Some Time&nbsp
+    <input type="radio" value="60" name="options1">4.Most Time&nbsp
+    <input type="radio" value="90" name="options1">5.Always&nbsp<br><hr>
+
+<br>3.I feels nervous<br>.
+    <input type="radio" value="10" name="options2">1.Never &nbsp
+    <input type="radio" value="20" name="options2">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options2">3.Some Time&nbsp
+    <input type="radio" value="60" name="options2">4.Most Time&nbsp
+    <input type="radio" value="90" name="options2">5.Always&nbsp<br><hr>
+
+<br>4. I feel short of breath after mild exercise like climbing up four flights of stairs.<br>
+
+    <input type="radio" value="10" name="options3">1.Never &nbsp
+    <input type="radio" value="20" name="options3">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options3">3.Some Time&nbsp
+    <input type="radio" value="60" name="options3">4.Most Time&nbsp
+    <input type="radio" value="90" name="options3">5.Always&nbsp<br><hr>
+
+
+<br>5.I lack physical energy<br>
+    <input type="radio" value="10" name="options4">1.Never &nbsp
+    <input type="radio" value="20" name="options4">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options4">3.Some Time&nbsp
+    <input type="radio" value="60" name="options4">4.Most Time&nbsp
+    <input type="radio" value="90" name="options4">5.Always&nbsp<br><hr>
+
+    <hr><br>
+		</div>
+
+
+
+    <input type="button" value="Sleep Indicator" onClick="showHideDiv('divMsg1')"/><br><br>
+		<div id="divMsg1">
+				<br>1.My body feels tense all over.<br>
+    <input type="radio" value="10" name="options">1.Never &nbsp
+    <input type="radio" value="20" name="options">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options">3.Some Time&nbsp
+    <input type="radio" value="60" name="options">4.Most Time&nbsp
+    <input type="radio" value="90" name="options">5.Always&nbsp<br><hr>
+
+<br>2.I get severe or chronic headaches.<br>
+    <input type="radio" value="10" name="options1">1.Never &nbsp
+    <input type="radio" value="20" name="options1">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options1">3.Some Time&nbsp
+    <input type="radio" value="60" name="options1">4.Most Time&nbsp
+    <input type="radio" value="90" name="options1">5.Always&nbsp<br><hr>
+
+<br>3.I feels nervous<br>.
+    <input type="radio" value="10" name="options2">1.Never &nbsp
+    <input type="radio" value="20" name="options2">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options2">3.Some Time&nbsp
+    <input type="radio" value="60" name="options2">4.Most Time&nbsp
+    <input type="radio" value="90" name="options2">5.Always&nbsp<br><hr>
+
+<br>4. I feel short of breath after mild exercise like climbing up four flights of stairs.<br>
+
+    <input type="radio" value="10" name="options3">1.Never &nbsp
+    <input type="radio" value="20" name="options3">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options3">3.Some Time&nbsp
+    <input type="radio" value="60" name="options3">4.Most Time&nbsp
+    <input type="radio" value="90" name="options3">5.Always&nbsp<br><hr>
+
+
+<br>5.I lack physical energy<br>
+    <input type="radio" value="10" name="options4">1.Never &nbsp
+    <input type="radio" value="20" name="options4">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options4">3.Some Time&nbsp
+    <input type="radio" value="60" name="options4">4.Most Time&nbsp
+    <input type="radio" value="90" name="options4">5.Always&nbsp<br><hr>
+
+    <hr><br>
+		</div>
+
+
+
+
+    <input type="button" value="Emotional Indicator" onClick="showHideDiv('divMsg2')"/><br><br>
+		<div id="divMsg2">
+
+            <br>1.I have temper outbursts I can't control.<br>
+    <input type="radio" value="10" name="options16">1.Never &nbsp
+    <input type="radio" value="20" name="options16">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options16">3.Some Time&nbsp
+    <input type="radio" value="60" name="options16">4.Most Time&nbsp
+    <input type="radio" value="90" name="options16">5.Always&nbsp<br><hr>
+
+<br>2.My emotions change unpredictably and without any apparent reason.<br>
+    <input type="radio" value="10" name="options17">1.Never &nbsp
+    <input type="radio" value="20" name="options17">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options17">3.Some Time&nbsp
+    <input type="radio" value="60" name="options17">4.Most Time&nbsp
+    <input type="radio" value="90" name="options17">5.Always&nbsp<br><hr>
+
+<br>3.I have trouble remembering things.<br>.
+    <input type="radio" value="10" name="options18">1.Never &nbsp
+    <input type="radio" value="20" name="options18">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options18">3.Some Time&nbsp
+    <input type="radio" value="60" name="options18">4.Most Time&nbsp
+    <input type="radio" value="90" name="options18">5.Always&nbsp<br><hr>
+
+<br>4.I worry a lot..<br>
+
+    <input type="radio" value="10" name="options19">1.Never &nbsp
+    <input type="radio" value="20" name="options19">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options19">3.Some Time&nbsp
+    <input type="radio" value="60" name="options19">4.Most Time&nbsp
+    <input type="radio" value="90" name="options19">5.Always&nbsp<br><hr>
+
+
+<br>5.I feel like I really can't trust anyone.<br>
+    <input type="radio" value="10" name="options20">1.Never &nbsp
+    <input type="radio" value="20" name="options20">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options20">3.Some Time&nbsp
+    <input type="radio" value="60" name="options20">4.Most Time&nbsp
+    <input type="radio" value="90" name="options20">5.Always&nbsp<br><hr>
+
+<br>6.I feel extremely sensitive and irritable.<br>.
+    <input type="radio" value="10" name="options21">1.Never &nbsp
+    <input type="radio" value="20" name="options21">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options21">3.Some Time&nbsp
+    <input type="radio" value="60" name="options21">4.Most Time&nbsp
+    <input type="radio" value="90" name="options21">5.Always&nbsp<br><hr>
+
+        </div>
+
+
+    <input type="button" value="Behavioural Indicator" onClick="showHideDiv('divMsg3')"/><br><br>
+		<div id="divMsg3">
+
+
+            <br>1.I often talk rude to people<br>
+    <input type="radio" value="10" name="options22">1.Never &nbsp
+    <input type="radio" value="20" name="options22">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options22">3.Some Time&nbsp
+    <input type="radio" value="60" name="options22">4.Most Time&nbsp
+    <input type="radio" value="90" name="options22">5.Always&nbsp<br><hr>
+
+<br>2.I have trouble meeting a boyfriend/ girlfriend..<br>
+    <input type="radio" value="10" name="options23">1.Never &nbsp
+    <input type="radio" value="20" name="options23">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options23">3.Some Time&nbsp
+    <input type="radio" value="60" name="options23">4.Most Time&nbsp
+    <input type="radio" value="90" name="options23">5.Always&nbsp<br><hr>
+
+<br>3. I go to work even when Ifeel sick.<br>.
+    <input type="radio" value="10" name="options24">1.Never &nbsp
+    <input type="radio" value="20" name="options24">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options24">3.Some Time&nbsp
+    <input type="radio" value="60" name="options24">4.Most Time&nbsp
+    <input type="radio" value="90" name="options24">5.Always&nbsp<br><hr>
+
+<br>4.I have no friends.<br>
+    <input type="radio" value="10" name="options25">1.Never &nbsp
+    <input type="radio" value="20" name="options25">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options25">3.Some Time&nbsp
+    <input type="radio" value="60" name="options25">4.Most Time&nbsp
+    <input type="radio" value="90" name="options25">5.Always&nbsp<br><hr>
+
+
+<br>5.I always make false assumptions about others <br>
+    <input type="radio" value="10" name="options26">1.Never &nbsp
+    <input type="radio" value="20" name="options26">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options26">3.Some Time&nbsp
+    <input type="radio" value="60" name="options26">4.Most Time&nbsp
+    <input type="radio" value="90" name="options26">5.Always&nbsp<br><hr>
+
+
+<br>6.I drink alcohol or use drugs to relax.<br>
+    <input type="radio" value="10" name="options27">1.Never &nbsp
+    <input type="radio" value="20" name="options27">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options27">3.Some Time&nbsp
+    <input type="radio" value="60" name="options27">4.Most Time&nbsp
+    <input type="radio" value="90" name="options27">5.Always&nbsp<br><hr>
+
+        </div>
+
+
+
+    <input type="button" value="Personal Habit" onClick="showHideDiv('divMsg4')"/><br><br>
+		<div id="divMsg4">
+
+            <br>1. I lack time to read the daily newspaper<br>
+    <input type="radio" value="10" name="options29">1.Never &nbsp
+    <input type="radio" value="20" name="options29">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options29">3.Some Time&nbsp
+    <input type="radio" value="60" name="options29">4.Most Time&nbsp
+    <input type="radio" value="90" name="options29">5.Always&nbsp<br><hr>
+
+<br>2.I spend less than 30 minutesa day working toward a life goal or ambition of mine.<br>
+    <input type="radio" value="10" name="options30">1.Never &nbsp
+    <input type="radio" value="20" name="options30">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options30">3.Some Time&nbsp
+    <input type="radio" value="60" name="options30">4.Most Time&nbsp
+    <input type="radio" value="90" name="options30">5.Always&nbsp<br><hr>
+
+<br>3.I spend less than three hours a week working on a hobby of mine..<br>.
+    <input type="radio" value="10" name="options31">1.Never &nbsp
+    <input type="radio" value="20" name="options31">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options31">3.Some Time&nbsp
+    <input type="radio" value="60" name="options31">4.Most Time&nbsp
+    <input type="radio" value="90" name="options31">5.Always&nbsp<br><hr>
+
+<br>4.I watch television for entertainment more than one hour a day.<br>.
+    <input type="radio" value="10" name="options32">1.Never &nbsp
+    <input type="radio" value="20" name="options32">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options32">3.Some Time&nbsp
+    <input type="radio" value="60" name="options32">4.Most Time&nbsp
+    <input type="radio" value="90" name="options32">5.Always&nbsp<br><hr>
+
+<br>5.When I feel stressed, it is difficult for me to plan time and activities to constructively release my stress.<br>.
+    <input type="radio" value="10" name="options33">1.Never &nbsp
+    <input type="radio" value="20" name="options33">2.Almost Never &nbsp
+    <input type="radio" value="40" name="options33">3.Some Time&nbsp
+    <input type="radio" value="60" name="options33">4.Most Time&nbsp
+    <input type="radio" value="90" name="options33">5.Always&nbsp<br><hr>
+
+
+        </div>
+
+
+
+    <div class="button">
+        <center><button class="login100-form-btn">
+							Submit
+        </button></center>
+    </div>
+</form>
+</body>
+</html>
